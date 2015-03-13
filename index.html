@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>korea</title>
+    <style>
+      @-webkit-keyframes wiggle {
+        0% { margin-top: -150px; }
+        33% { margin-top: -170px; }
+        66% { margin-top: -130px; }
+        100% { margin-top: -150px; }
+      }
+
+      @-webkit-keyframes back {
+        0% { background: url('./img/01.jpg') round; }
+        25% { background: url('./img/02.jpg') round; }
+        50% { background: url('./img/03.jpg') round; }
+        75% { background: url('./img/04.jpg') round; }
+        100% { background: url('./img/01.jpg') round; }
+      }
+
+     .train_holder {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .train {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: url('./img/train1.png') round;
+        width: 700px;
+        height: 300px;
+        margin-top: -150px;
+        margin-left: -350px;
+
+        -webkit-animation: wiggle 1s ease-out infinite;
+      }
+
+      .pictures {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        -webkit-animation: back 20s ease-out infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pictures">
+    </div>
+    <div class="train_holder">
+      <div class="train"></div>
+    </div>
+  </body>
+</html>
